@@ -1,0 +1,9 @@
+.page-container{
+    @include container;
+
+    p{
+        max-width: 700px;
+        line-height: 1.5;
+        font-family: 'Alegreya';
+    }
+}

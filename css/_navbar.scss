@@ -1,19 +1,32 @@
+$navbar-height: 96px;
+
 .navbar{
     background-color: $bg-color;
     width: 100%;
-    height: 64px;
+    height: $navbar-height;
+    position: relative;
 
     .navbar-inner{
         @include container;
         display: flex;
-        line-height: 64px;
+        align-items: center;
+        height: 100%;
+
+        .navbar-logo{
+            height: 70%;
+            margin-right: auto;
+
+            img{
+                height: 100%;
+            }
+        }
 
         a, a:visited{
-            color: $s-blue;
+            color: #fff;
         }
 
         div.navbar-item:not(:last-of-type){
-            margin-right: 16px;
+            margin-right: 32px;
         }
     }
 }

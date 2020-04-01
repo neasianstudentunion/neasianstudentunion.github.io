@@ -4,9 +4,11 @@
 @import 'abstracts';
 @import 'navbar';
 @import 'footer';
+@import 'page';
 
 body {
   margin: 0;
+  font-size: 20px;
   font-family: $font-family;
 }
 
@@ -17,8 +19,4 @@ a, a:visited {
 
 a:hover {
   text-decoration: underline;
-}
-
-.page-container{
-  @include container;
 }
