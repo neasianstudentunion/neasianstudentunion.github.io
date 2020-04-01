@@ -1,0 +1,13 @@
+$bg-color: #222;
+$s-yellow: #ffc248;
+$s-magenta: #d599ff;
+$s-purple: #9999ff;
+$s-blue: #99cfff; 
+$font-family:  "DM Sans",sans-serif;
+$link-color:   navy;
+
+@mixin container{
+    max-width: 1200px;
+    padding: 0 24px;
+    margin: 0 auto;
+}

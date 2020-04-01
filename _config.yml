@@ -1,8 +1,4 @@
-###########
-# site.title
-
-title:    'Jekyll Starter Theme V2'
-subtitle: 'Another Static Site Quick Starter Theme'
+title:    'New England Asian Student Union'
 
 
 nav:
@@ -13,14 +9,11 @@ nav:
 - { title: 'About',                href: 'https://github.com/henrythemes/jekyll-starter-theme-v2' }
 
 
-#########################
-# more settings
-
 markdown: kramdown
 
 sass:
   sass_dir: css
-  style:    expanded
+  style:    compressed
 
 exclude:
 - README.md

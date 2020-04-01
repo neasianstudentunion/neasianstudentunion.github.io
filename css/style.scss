@@ -1,20 +1,12 @@
 ---
-###
-# note: will result in an all-in-one-file stylesheet e.g. style.css
-#   in _config.yml add:
-#     sass:
-#       sass_dir: css
-#       style:    expanded
 ---
 
-
-@import 'settings';
-
-/*
- * css styles go here
- */
+@import 'abstracts';
+@import 'navbar';
+@import 'footer';
 
 body {
+  margin: 0;
   font-family: $font-family;
 }
 
@@ -27,28 +19,6 @@ a:hover {
   text-decoration: underline;
 }
 
-
-
-
-#header {
-  padding: 4px;
+.page-container{
+  @include container;
 }
-
-#header .big {
-  font-size:   140%;
-  font-weight: bold;
-}
-
-#header .small {
-  font-size:    90%;
-  color:        grey;
-  padding-left: 15px;
-}
-
-#nav {
-  padding: 6px;
-}
-
-
-
-
