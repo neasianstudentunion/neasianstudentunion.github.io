@@ -4,10 +4,12 @@ $s-magenta: #d599ff;
 $s-purple: #9999ff;
 $s-blue: #99cfff; 
 $font-family:  "DM Sans",sans-serif;
-$link-color:   navy;
+$link-color: $s-purple;
+
+$container-width: 900px;
 
 @mixin container{
-    max-width: 1200px;
+    max-width: $container-width;
     padding: 0 24px;
     margin-left: auto;
     margin-right: auto;

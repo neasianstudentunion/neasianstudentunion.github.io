@@ -9,7 +9,7 @@
       {% for item in site.data.navbar %}
       <div class="navbar-item">
         {% if item.link contains 'http' %}
-        <a href="{{ item.link }}">{{ item.text }}</a>
+        <a href="{{ item.link }}" target="_blank">{{ item.text }}</a>
         {% else %}
         <a href="{{ item.link | relative_url }}">{{ item.text }}</a>
         {% endif %}
@@ -23,5 +23,9 @@
 <script>
   $(".navbar-hamburger").on('click', function(){
     $(".navbar-menu").toggleClass("show");
+  })
+
+  $(".navbar a").on('click', function(){
+    $(".navbar-menu").removeClass("show");
   })
 </script>

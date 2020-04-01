@@ -1,3 +1,13 @@
+.footer{
+    margin-top: 64px;
+    padding: 24px 0;
+    background-color: $bg-color;
+}
+
 .footer-inner{
     @include container;
+}
+
+.footer-logo{
+    width: 144px;
 }
