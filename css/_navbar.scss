@@ -4,7 +4,9 @@ $navbar-height: 96px;
     background-color: $bg-color;
     width: 100%;
     height: $navbar-height;
-    position: relative;
+    position: fixed;
+    top: 0;
+    color: #fff;
 
     .navbar-inner{
         @include container;
@@ -14,19 +16,90 @@ $navbar-height: 96px;
 
         .navbar-logo{
             height: 70%;
-            margin-right: auto;
 
             img{
                 height: 100%;
             }
         }
 
+        .navbar-menu{
+            display: flex;
+
+            a, a:visited{
+                color: #fff;
+            }
+        }
+
         a, a:visited{
             color: #fff;
         }
+    }
+}
 
-        div.navbar-item:not(:last-of-type){
-            margin-right: 32px;
+@media (min-width: 600px){
+    .navbar{
+
+        .navbar-inner{
+
+            .navbar-logo{
+                height: 85%;
+            }
+
+            .navbar-menu{
+                margin-left: auto;
+            }
+
+            div.navbar-item:not(:last-of-type){
+                margin-right: 32px;
+            }
+
+            .navbar-hamburger{
+                display: none;
+            }
+
+        }
+    }
+}
+
+@media (max-width: 600px){
+    .navbar{
+        height: 64px;
+
+        .navbar-inner{
+
+            .navbar-logo{
+                height: 85%;
+            }
+
+            .navbar-menu{
+                flex-flow: column nowrap;
+                justify-content: center;
+                position: fixed;
+                top: 0;
+                right: -300px;
+                width: 300px;
+                box-sizing: border-box;
+                padding: 24px;
+                background-color: $bg-color;
+                height: 100%;
+                text-align: right;
+                transition: right 0.3s ease;
+
+                &.show{
+                    right: 0;
+                }
+            }
+
+            .navbar-item{
+                margin: 8px 0;
+            }
+
+            .navbar-hamburger{
+                position: absolute;
+                right: 24px;
+                z-index: 1;
+            }
+
         }
     }
 }

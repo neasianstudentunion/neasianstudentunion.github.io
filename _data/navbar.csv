@@ -1,5 +1,4 @@
 text,link
-Welcome,/
-Two,/two
-Three,/three
-About,/about
+Home,#home-section
+Events,#events-section
+About,#about-section

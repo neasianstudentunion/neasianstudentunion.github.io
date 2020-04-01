@@ -1,9 +1,16 @@
 .page-container{
     @include container;
+    margin-top: 128px;
 
-    p{
+    p, ul, ol, blockquote, table{
         max-width: 700px;
         line-height: 1.5;
-        font-family: 'Alegreya';
+        font-family: 'Fira Sans';
+    }
+}
+
+@media (min-width: 600px){
+    .page-container{
+        margin-top: 192px;
     }
 }

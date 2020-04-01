@@ -1,16 +1,27 @@
 <div class="navbar">
   <div class='navbar-inner'>
     <div class='navbar-logo'>
-      <img src='{{ site.baseurl }}/img/logo.png'>
+      <a href='{{ site.baseurl }}/'>
+        <img src='{{ site.baseurl }}/img/logo.png'>
+      </a>
     </div>
-    {% for item in site.data.navbar %}
-    <div class="navbar-item">
-      {% if item.link contains 'http' %}
-      <a href="{{ item.link }}">{{ item.text }}</a>
-      {% else %}
-      <a href="{{ item.link | relative_url }}">{{ item.text }}</a>
-      {% endif %}
+    <div class='navbar-menu'>
+      {% for item in site.data.navbar %}
+      <div class="navbar-item">
+        {% if item.link contains 'http' %}
+        <a href="{{ item.link }}">{{ item.text }}</a>
+        {% else %}
+        <a href="{{ item.link | relative_url }}">{{ item.text }}</a>
+        {% endif %}
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
+    <div class='navbar-hamburger'><span><i class="fas fa-bars"></i></span></div>
   </div>
 </div>
+
+<script>
+  $(".navbar-hamburger").on('click', function(){
+    $(".navbar-menu").toggleClass("show");
+  })
+</script>
